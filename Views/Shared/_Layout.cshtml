@@ -1,0 +1,170 @@
+﻿@section stylecss{
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"   />
+    <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true"   />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" asp-append-version="true"   />
+    <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true"   />
+    <!--Awesome Icons style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Elaxi</title>
+    <link rel="stylesheet" href="~/Ride_Booking_Application.styles.css" asp-append-version="true" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+@RenderSection("stylecss",true)
+<body>
+   
+        <div class="hero_area">
+            <!-- header section starts -->
+            <header class="header_section ">
+                <div class="">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
+                        <a class="navbar-brand" href="index.html">
+                            <span>
+                                Elaxi
+                            </span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                        </button>
+                        <div class="collapse navbar-collapse ml-auto  " id="navbarSupportedContent">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/Home/home">Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/About/about">About </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/WhyUs/whyus">Why Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Blog/blog">Blog</a>
+                                </li>
+                            </ul>
+                            <div class="user_option ">
+                                <a href="/Login/login" class="">
+                                    Login / signUp
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+        </div>
+
+   
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <section class="info_section ">
+
+        <div class="container">
+            <div class="info_top ">
+                <div class="row ">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="info_detail">
+                            
+                                <h4>
+                                    Elaxi
+                                </h4>
+                           
+                            <p>
+                                Soluta odit exercitationem rerum aperiam eos consectetur impedit delectus qui reiciendis, distinctio, asperiores fuga labore a? Magni natus.
+                            </p>
+                            <div class="social_box">
+                                <a href="">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+                        <h4>
+                            Contact us
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        </p>
+                        <div class="contact_nav">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    Location
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call : +01 123455678990
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    Email : demo@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info_form">
+                            <h4>
+                                SIGN UP TO OUR NEWSLETTER
+                            </h4>
+                            <form action="">
+                                <input type="text" placeholder="Enter Your Email" />
+                                <button type="submit">
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end info_section -->
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By
+                <a href="https://html.design/">Free Html Templates</a>
+            </p>
+        </div>
+    </footer>
+    <!-- footer section -->
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
